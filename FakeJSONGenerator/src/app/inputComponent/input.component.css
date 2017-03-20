@@ -1,0 +1,78 @@
+ .input-container {
+   display: block;
+   min-width: 390px;
+   padding: 5px 0 5px 5px;
+   width: 90%;
+ }
+ 
+ .variable {
+   color: red;
+   display: inline-block;
+   min-height: 30px;
+   line-height: 30px;
+   min-width: 150px;
+   text-align: center;
+ }
+ 
+ .variable input {
+   height: 30px;
+   font-weight: 500;
+   padding: 7px;
+   color: #444;
+   border: 0;
+   border-bottom: 1px solid #ffffff;
+   box-shadow: 0 0px 3px 0px #337ab7;
+   -webkit-transition: all 0.3s ease-in;
+   transition: all 0.3s ease-in;
+   border-radius: 2%;
+ }
+ 
+ .variable input:focus {
+   border-bottom: 1px solid #35aefe;
+ }
+ 
+ .expression {
+   display: inline-block;
+   color: blue;
+   line-height: 30px;
+   min-width: 150px;
+   text-align: center;
+ }
+ 
+ .expression select {
+   position: relative;
+   top: 0;
+   height: 31px;
+   padding: 2px 8px;
+   color: #444;
+ }
+ 
+ .remove-btn-container {
+   display: inline-block;
+   width: 30px;
+   height: 30px;
+ }
+ 
+ .remove-btn-container button {
+   width: 30px;
+   height: 30px;
+   line-height: 30px;
+   background-color: #ff6347;
+   color: #ffffff;
+   border-radius: 50%;
+   font-weight: 600;
+   outline: none;
+   border: 0;
+   box-shadow: 0px 0px 3px #c3a9a9;
+ }
+ 
+ .edit-btn-container {
+   display: inline-block;
+   color: #444;
+   font-size: 15px;
+   font-weight: 500;
+ }
+
+ .title-section{
+   position: relative;
+ }

@@ -1,0 +1,11 @@
+<div class="row input-container">
+  <div class="variable col-sm-4">
+    <input type="text" [(ngModel)]="variable" (keyup)="updateData()" />
+  </div>
+  <div class="expression col-sm-5">
+    <select class="input-select" (change)="updateData()" [(ngModel)]="expression">
+        <option *ngFor="let item of expressionTypes" [value]="item">{{item}}</option>
+    </select>
+  </div>
+  <div class="remove-btn-container col-sm-3"><button (click)="deleteItem()"><span   class="glyphicon glyphicon-minus"></span></button></div>
+</div>

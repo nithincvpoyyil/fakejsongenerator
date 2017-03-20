@@ -1,0 +1,55 @@
+<div>
+  <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #2196F3;">
+    <div class="navbar-header">
+      <span class="navbar-brand" style="color: #FFFFFF" (click)="printVals()">Fake JSON Generator </span>
+    </div>
+    <div class="nav navbar-nav navbar-right">
+      <span class="item-limit-text">Number of Items:</span>
+      <span class="item-limit-input"><input type='number'  min="1" max="1000"  [(ngModel)]="limitValue"/></span>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-sm-12 col-md-6">
+        <div class="row title-section">
+          JSON - (Key,Value)
+        </div>
+        <div class="input-item-container">
+          <!--  <ng-container #inputitemcontainer></ng-container> -->
+          <input-item *ngFor="let inputItem of inputList" (onInputItemChange)="onUpdateOfInputItem($event,inputItem)" (onDeleteItem)="removeInput($event.variable)"
+            [(variable)]="inputItem.variable" [(expression)]="inputItem.expression"></input-item>
+        </div>
+      </div>
+      <div class="col-sm-12 col-sm-12 col-md-6">
+        <div class="row title-section">
+          JSON - Generated
+        </div>
+        <div class="output-json-container">
+
+          <pre class="code-generated" innerHtml="{{jsonGenerated}}"></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <a (click)="insert()" title="add JSON key-value" class="btn btn-circle btn-primary btn-lg" style="position: fixed; bottom: 15px; right: 15px">
+    <span class="glyphicon glyphicon-plus"></span>
+  </a>
+
+
+  <a (click)="runJsonGenrateFunction()" title="generate JSON" class="btn btn-circle btn-success btn-lg" style="position: fixed; bottom: 15px; right: 60px">
+    <span class="glyphicon glyphicon-play"></span>
+  </a>
+
+  <a (click)="downloadJson()" title="download JSON" class="btn btn-circle btn-warning btn-lg"
+    style="position: fixed; bottom: 15px; right: 105px">
+    <span class="glyphicon glyphicon-download-alt"></span>
+  </a>
+
+  <a (click)="showWithLovePopup()" title="with <3 of JS" class="btn btn-circle btn-danger btn-lg" style="position: fixed; bottom: 15px; right: 150px">
+    <span class="glyphicon glyphicon-heart"></span>
+  </a>
+</div>

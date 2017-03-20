@@ -1,0 +1,45 @@
+{
+  "name": "angular-extension",
+  "version": "0.0.0",
+  "license": "MIT",
+  "angular-cli": {},
+  "scripts": {
+    "start": "ng serve",
+    "lint": "tslint \"src/**/*.ts\"",
+    "test": "ng test",
+    "pree2e": "webdriver-manager update",
+    "e2e": "protractor"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "latest",
+    "@angular/compiler": "latest",
+    "@angular/core": "latest",
+    "@angular/forms": "latest",
+    "@angular/http": "latest",
+    "@angular/platform-browser": "latest",
+    "@angular/platform-browser-dynamic": "latest",
+    "@angular/router": "latest",
+    "@types/node": "latest",
+    "@types/uuid": "latest",
+    "bootstrap": "^3.3.7",
+    "core-js": "latest",
+    "rxjs": "latest",
+    "ts-helpers": "latest",
+    "uuid": "latest",
+    "zone.js": "latest"
+  },
+  "devDependencies": {
+    "@angular/cli": "latest",
+    "@angular/compiler-cli": "latest",
+    "@types/jasmine": "2.5.38",
+    "@types/node": "latest",
+    "codelyzer": "~2.0.0-beta.1",
+    "jasmine-core": "2.5.2",
+    "jasmine-spec-reporter": "2.5.0",
+    "ts-node": "latest",
+    "tslint": "^4.0.2",
+    "typescript": "latest",
+    "webdriver-manager": "10.2.5"
+  }
+}

@@ -1,0 +1,59 @@
+
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 5px 10px 5px;
+  min-width: 700px;
+  min-height: 400px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+svg path,
+svg rect {
+  fill: #2196F3;
+}
+
+input-item {
+  height: 80px;
+  width: 100%;
+}
+
+.string {
+  color: green;
+}
+
+.number {
+  color: darkorange;
+}
+
+.boolean {
+  color: blue;
+}
+
+.null {
+  color: magenta;
+}
+
+.key {
+  color: red;
+}
+
+.row.title-section {
+  position: relative;
+  top: 60px;
+  left: 9px;
+  font-size: 2rem;
+  color: #444;
+  font-weight: 600;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  border-bottom: 5px solid #444;
+  border-bottom-left-radius: 23%;
+  padding-right: 5px;
+  margin: 0 5px 0 5px;
+}
