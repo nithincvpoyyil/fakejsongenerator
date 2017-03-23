@@ -7,6 +7,9 @@ This project is using [angular-cli](https://github.com/angular/angular-cli), [fa
 ## Screenshot
 ![alt tag](https://raw.githubusercontent.com/nithincvpoyyil/fakejsongenerator/master/screenshot.png)
 
+
+## Demo link : https://nithincvpoyyil.github.io/fakejson/
+
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
