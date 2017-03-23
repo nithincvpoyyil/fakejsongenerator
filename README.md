@@ -4,7 +4,8 @@ Fake json generator is a basic JSON creator, which helps to build common JSON ob
 
 This project is using [angular-cli](https://github.com/angular/angular-cli), [fakerJS](https://github.com/FotoVerite/Faker.js) and [this](http://jsfiddle.net/KJQ9K/554/) fiddle. Thanks for author of this [project](https://github.com/couchbaselabs/couchbase-chrome-extension), which I have referred .
 
-
+## Screenshot
+![alt tag](https://raw.githubusercontent.com/nithincvpoyyil/fakejsongenerator/master/screenshot.png)
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
