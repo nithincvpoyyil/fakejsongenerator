@@ -50,10 +50,17 @@ input-item {
   font-size: 2rem;
   color: #444;
   font-weight: 600;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   padding-left: 5px;
   border-bottom: 5px solid #444;
-  border-bottom-left-radius: 23%;
   padding-right: 5px;
   margin: 0 5px 0 5px;
+}
+
+.row.title-section.left{
+  border-color: #ff7f50;
+}
+
+.row.title-section.right{
+  border-color: #40e0d0;
 }

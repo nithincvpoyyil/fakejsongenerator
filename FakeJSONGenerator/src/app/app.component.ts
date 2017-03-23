@@ -33,7 +33,8 @@ export class AppComponent implements OnInit {
     }
 
     public ngOnInit() {
-
+        this.insert('name', 'name');
+        this.insert('email', 'email');
     }
 
     public addInput(inputItem: IInputItem) {
@@ -61,8 +62,6 @@ export class AppComponent implements OnInit {
         return this.inputList;
     }
 
-
-
     public createComponentProgramatically() {
         const factory = this.componentFactoryResolver.resolveComponentFactory(InputComponent);
         const ref = this.inputItemContainer.createComponent(factory);
@@ -71,10 +70,10 @@ export class AppComponent implements OnInit {
         ref.changeDetectorRef.detectChanges();
     }
 
-    public insert() {
+    public insert(keyValue?: string, exprVal?: string) {
         this.expressionTypes = this.listService.getExpressionTypes();
-        let expression = 'random-string';
-        let variable = 'new-key-' + this.listService.generateRandom(8);
+        let expression = exprVal ? exprVal : 'random-string';
+        let variable = keyValue ? keyValue : 'new-key-' + this.listService.generateRandom(8);
         let inputItem: IInputItem = { 'expression': expression, 'variable': variable };
         this.addInput(inputItem);
         this.runJsonGenrateFunction();
@@ -82,17 +81,17 @@ export class AppComponent implements OnInit {
 
     public downloadJson() {
 
-        var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(this.orginalJSONStringified);
-        var dlAnchorElem = document.getElementById('dummy-anchor-element-to-download');
+        let dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(this.orginalJSONStringified);
+        let dlAnchorElem = document.getElementById('dummy-anchor-element-to-download');
         dlAnchorElem.setAttribute("href", dataStr);
         dlAnchorElem.setAttribute("download", "fakeJSON.json");
         dlAnchorElem.click();
     }
 
-    public printVals() {
-        this.inputList.filter((inputItem: IInputItem) => {
-            console.info(inputItem.variable, ' : ', inputItem.expression);
-        });
+    public copyToClipBoard() {
+        let element = <HTMLInputElement><any>document.querySelector('#code-generated-unique-id');
+        element.select();
+        document.execCommand('copy');
     }
 
     public onUpdateOfInputItem(newInputItem: IInputItem, oldInputItem: IInputItem) {
@@ -157,7 +156,7 @@ export class AppComponent implements OnInit {
     public getStringOrNumberArray(isString: boolean): any[] {
 
         let limit = this.listService.generateRandomNumber(3, 10);
-        let array: any[] =[];
+        let array: any[] = [];
 
         for (let i = 0; i < limit; i++) {
             if (isString) {
@@ -165,7 +164,6 @@ export class AppComponent implements OnInit {
             } else {
                 array.push(this.listService.generateRandomNumber(1, 9999));
             }
-
         }
         return array;
     }
@@ -174,8 +172,9 @@ export class AppComponent implements OnInit {
         // http://jsfiddle.net/KJQ9K/554/
         // http://stackoverflow.com/questions/4810841/how-can-i-pretty-print-json-using-javascript
         jsonString = jsonString.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-        return jsonString.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
-            var cls = 'number';
+        let regex =/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g;
+        return jsonString.replace(regex, (match) => {
+            let cls = 'number';
             if (/^"/.test(match)) {
                 if (/:$/.test(match)) {
                     cls = 'key';
@@ -207,7 +206,7 @@ export class AppComponent implements OnInit {
     public showWithLovePopup() {
 
         bootbox.alert({
-            message: "Thank you for using the app, kindly share your thoughts!",
+            message: 'Thank you for using the app, Kindly share your thoughts and feedbacks!',
             backdrop: true
         });
     }

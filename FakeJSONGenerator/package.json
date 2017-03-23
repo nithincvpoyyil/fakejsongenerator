@@ -1,5 +1,5 @@
 {
-  "name": "angular-extension",
+  "name": "fake-json-generator",
   "version": "0.0.0",
   "license": "MIT",
   "angular-cli": {},
@@ -24,6 +24,7 @@
     "@types/uuid": "latest",
     "bootstrap": "^3.3.7",
     "core-js": "latest",
+    "moment": "^2.18.1",
     "rxjs": "latest",
     "ts-helpers": "latest",
     "uuid": "latest",

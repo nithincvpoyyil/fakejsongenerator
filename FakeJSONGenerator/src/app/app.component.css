@@ -1,4 +1,3 @@
-
 /* Taken from http://bootsnipp.com/snippets/8deZ */
 
 .btn-circle {
@@ -53,28 +52,44 @@ a.btn.btn-circle.btn-lg {
   line-height: 30px;
 }
 
+.btn-copy {
+  color: #fff4f4;
+  background-color: #ce1737;
+  border-color: #e02c2c;
+}
 
 span.item-limit-text {
-    color: #fff;
-    font-size: 1.5rem;
-    margin-right: 19px;
-    display: inline-block;
-    position: relative;
-    top: 5px;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-right: 19px;
+  display: inline-block;
+  position: relative;
+  top: 5px;
 }
 
 span.item-limit-input {
-    width: 50px;
-    overflow: hidden;
-    display: inline-block;
-    margin-right: 50px;
-    position: relative;
-    top: 12px;
-    text-align: center;
-    color: #444;
+  width: 50px;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 50px;
+  position: relative;
+  top: 12px;
+  text-align: center;
+  color: #444;
 }
 
 span.item-limit-input input[type="number"] {
+  padding: 0 5px;
+}
 
-    padding:0 5px;
+#code-generated-unique-id {
+  width: 1px;
+  height: 1px;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position:fixed;
+  top:0;
+  left:0;
 }
